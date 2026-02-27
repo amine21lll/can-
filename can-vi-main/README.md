@@ -92,8 +92,8 @@ Ce projet simule un backend réel mais fonctionne 100% frontend, idéal pour :
 
 ## 👤 Auteur
 
-**Ayoub Achmaoui**
-- GitHub: [@achmaouiayoub120-beep](https://github.com/achmaouiayoub120-beep)
+**ANNOUKA MOHAMED AMINE**
+- GitHub: (https://github.com/amine21lll))
 
 ## 📄 Licence
 
