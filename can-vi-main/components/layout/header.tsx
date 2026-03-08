@@ -8,15 +8,14 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 
 const navigation = [
-  { name: "Accueil", href: "/" },
-  { name: "Matchs", href: "/matches", icon: Calendar },
-  { name: "Billetterie", href: "/tickets", icon: Ticket },
-  { name: "Benevoles", href: "/volunteers", icon: Users },
-  { name: "Partenaires", href: "/partners", icon: Building2 },
-  { name: "Mascotte", href: "/mascotte", icon: Sparkles },
+  { name: "Home", href: "/" },
+  { name: "Matches", href: "/matches", icon: Calendar },
+  { name: "Tickets", href: "/tickets", icon: Ticket },
+  { name: "Volunteers", href: "/volunteers", icon: Users },
+  { name: "Sponsors", href: "/partners", icon: Building2 },
 ]
 
-const OFFICIAL_LOGO_URL = "/images/can2025-logo.png"
+const OFFICIAL_LOGO_URL = "/images/wc2026-logo.png"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -29,7 +28,7 @@ export function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
               src={logoError ? "/placeholder.svg" : OFFICIAL_LOGO_URL}
-              alt="CAN Morocco 2025"
+              alt="FIFA World Cup 2026"
               width={160}
               height={56}
               className="h-14 w-auto object-contain"
@@ -45,7 +44,7 @@ export function Header() {
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-primary-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span className="sr-only">Ouvrir le menu</span>
+            <span className="sr-only">Toggle menu</span>
             {mobileMenuOpen ? (
               <X className="h-6 w-6" aria-hidden="true" />
             ) : (
@@ -77,7 +76,7 @@ export function Header() {
           >
             <Link href="/login">
               <User className="h-4 w-4 mr-2" />
-              Connexion
+              Sign In
             </Link>
           </Button>
           <Button size="sm" asChild className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
