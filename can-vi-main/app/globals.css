@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* CAN Morocco 2025 Official Color Palette */
+/* FIFA World Cup 2026 Official Color Palette - North America */
 :root {
   /* Primary: Burgundy Red (CAN 2025 Brand) */
   --background: oklch(0.98 0.005 30);
@@ -16,20 +16,20 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.02 30);
 
-  /* Primary: CAN Burgundy #8B1538 */
-  --primary: oklch(0.35 0.15 15);
+  /* Primary: FIFA Navy Blue #002B5C */
+  --primary: oklch(0.2 0.12 260);
   --primary-foreground: oklch(0.98 0 0);
 
-  /* Secondary: Moroccan Green #006233 */
-  --secondary: oklch(0.4 0.12 155);
+  /* Secondary: World Cup Teal #00A4B8 */
+  --secondary: oklch(0.55 0.15 200);
   --secondary-foreground: oklch(0.98 0 0);
 
   /* Muted tones */
   --muted: oklch(0.95 0.01 30);
   --muted-foreground: oklch(0.45 0.02 30);
 
-  /* Accent: Gold */
-  --accent: oklch(0.75 0.15 85);
+  /* Accent: Gold #FFD700 */
+  --accent: oklch(0.75 0.18 90);
   --accent-foreground: oklch(0.15 0.02 30);
 
   --destructive: oklch(0.55 0.22 25);
@@ -40,46 +40,46 @@
   --ring: oklch(0.35 0.15 15);
 
   /* Chart colors for stats */
-  --chart-1: oklch(0.35 0.15 15);
-  --chart-2: oklch(0.4 0.12 155);
-  --chart-3: oklch(0.75 0.15 85);
-  --chart-4: oklch(0.55 0.22 25);
-  --chart-5: oklch(0.6 0.1 250);
+  --chart-1: oklch(0.2 0.12 260);
+  --chart-2: oklch(0.55 0.15 200);
+  --chart-3: oklch(0.75 0.18 90);
+  --chart-4: oklch(0.45 0.15 35);
+  --chart-5: oklch(0.65 0.12 250);
 
   --radius: 0.5rem;
 
   /* Sidebar */
-  --sidebar: oklch(0.2 0.08 15);
+  --sidebar: oklch(0.15 0.06 260);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.75 0.15 85);
+  --sidebar-primary: oklch(0.75 0.18 90);
   --sidebar-primary-foreground: oklch(0.15 0.02 30);
-  --sidebar-accent: oklch(0.3 0.1 15);
+  --sidebar-accent: oklch(0.3 0.12 200);
   --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.3 0.08 15);
-  --sidebar-ring: oklch(0.75 0.15 85);
+  --sidebar-border: oklch(0.25 0.08 260);
+  --sidebar-ring: oklch(0.75 0.18 90);
 }
 
 .dark {
-  --background: oklch(0.12 0.02 15);
+  --background: oklch(0.08 0.02 260);
   --foreground: oklch(0.95 0.01 30);
 
-  --card: oklch(0.18 0.03 15);
+  --card: oklch(0.15 0.03 260);
   --card-foreground: oklch(0.95 0.01 30);
 
-  --popover: oklch(0.18 0.03 15);
+  --popover: oklch(0.15 0.03 260);
   --popover-foreground: oklch(0.95 0.01 30);
 
-  --primary: oklch(0.5 0.18 15);
+  --primary: oklch(0.35 0.14 260);
   --primary-foreground: oklch(0.98 0 0);
 
-  --secondary: oklch(0.45 0.14 155);
+  --secondary: oklch(0.6 0.16 200);
   --secondary-foreground: oklch(0.98 0 0);
 
-  --muted: oklch(0.25 0.03 15);
+  --muted: oklch(0.25 0.03 260);
   --muted-foreground: oklch(0.65 0.02 30);
 
-  --accent: oklch(0.7 0.15 85);
-  --accent-foreground: oklch(0.12 0.02 15);
+  --accent: oklch(0.72 0.18 90);
+  --accent-foreground: oklch(0.08 0.02 260);
 
   --destructive: oklch(0.5 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
@@ -88,20 +88,20 @@
   --input: oklch(0.25 0.03 15);
   --ring: oklch(0.5 0.18 15);
 
-  --chart-1: oklch(0.55 0.18 15);
-  --chart-2: oklch(0.5 0.14 155);
-  --chart-3: oklch(0.75 0.15 85);
-  --chart-4: oklch(0.6 0.22 25);
-  --chart-5: oklch(0.65 0.12 250);
+  --chart-1: oklch(0.4 0.14 260);
+  --chart-2: oklch(0.6 0.16 200);
+  --chart-3: oklch(0.75 0.18 90);
+  --chart-4: oklch(0.55 0.15 35);
+  --chart-5: oklch(0.68 0.12 250);
 
-  --sidebar: oklch(0.15 0.04 15);
+  --sidebar: oklch(0.12 0.04 260);
   --sidebar-foreground: oklch(0.95 0.01 30);
-  --sidebar-primary: oklch(0.7 0.15 85);
-  --sidebar-primary-foreground: oklch(0.12 0.02 15);
-  --sidebar-accent: oklch(0.25 0.06 15);
+  --sidebar-primary: oklch(0.72 0.18 90);
+  --sidebar-primary-foreground: oklch(0.08 0.02 260);
+  --sidebar-accent: oklch(0.25 0.12 200);
   --sidebar-accent-foreground: oklch(0.95 0.01 30);
-  --sidebar-border: oklch(0.25 0.05 15);
-  --sidebar-ring: oklch(0.7 0.15 85);
+  --sidebar-border: oklch(0.2 0.05 260);
+  --sidebar-ring: oklch(0.72 0.18 90);
 }
 
 @theme inline {
@@ -152,7 +152,7 @@
   }
 }
 
-/* Custom utility classes for CAN 2025 */
+/* Custom utility classes for World Cup 2026 */
 @layer utilities {
   .text-balance {
     text-wrap: balance;

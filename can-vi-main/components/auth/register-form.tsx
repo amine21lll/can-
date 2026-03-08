@@ -4,18 +4,21 @@ import type React from "react"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Eye, EyeOff, Loader2, Mail, Lock, User } from "lucide-react"
+import { Eye, EyeOff, Loader2, Mail, Lock, User, AlertCircle, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import Link from "next/link"
+import { signUp } from "@/app/actions/auth"
 
 export function RegisterForm() {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
+  const [error, setError] = useState("")
+  const [success, setSuccess] = useState("")
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -28,18 +31,47 @@ export function RegisterForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError("")
+    setSuccess("")
+    
+    if (formData.password !== formData.confirmPassword) {
+      setError("Passwords do not match")
+      return
+    }
+
     setIsLoading(true)
 
-    // Simulate registration - In production, this would call Laravel API
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    const result = await signUp(
+      formData.email,
+      formData.password,
+      formData.firstName,
+      formData.lastName,
+      formData.country
+    )
 
-    // Redirect to login on success
-    router.push("/login")
-    setIsLoading(false)
+    if (result.error) {
+      setError(result.error)
+      setIsLoading(false)
+    } else {
+      setSuccess(result.message || "Registration successful! Please check your email.")
+      setTimeout(() => router.push("/login"), 2000)
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
+      {error && (
+        <div className="flex gap-2 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+          <AlertCircle className="h-5 w-5 flex-shrink-0" />
+          <p>{error}</p>
+        </div>
+      )}
+      {success && (
+        <div className="flex gap-2 rounded-lg border border-green-200 bg-green-50 p-4 text-sm text-green-800">
+          <CheckCircle className="h-5 w-5 flex-shrink-0" />
+          <p>{success}</p>
+        </div>
+      )}
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="firstName">Prenom</Label>
